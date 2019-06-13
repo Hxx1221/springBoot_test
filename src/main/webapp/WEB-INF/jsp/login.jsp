@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: hexixiang
   Date: 2019/6/13
-  Time: 15:34
+  Time: 20:47
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,6 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-成功访问该页。。。
+
+<form method="get" action="/user/login">
+    用户名：<input type="text" name="name"/><br/>
+
+    密码：<input type="text" name="pwd"/>
+    <input type="submit" value="登录"/>
+
+</form>
 </body>
 </html>

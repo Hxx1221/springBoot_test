@@ -16,6 +16,14 @@ public class UserController {
     @Autowired
     private UserJPA userJPA;
 
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String login(String username,String password){
+
+        String result="";
+
+
+        return "登录成功";
+    }
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public List<UserEntity> list() {
         List<UserEntity> all = userJPA.findAll();
