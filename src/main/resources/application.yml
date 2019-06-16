@@ -55,6 +55,14 @@ server:
   port: 8080
 
 
-
+mail:
+  smtp:
+   service: smtp.yeah.com
+   prot: 587
+  from:
+   address: 137125668@qq.com
+   smtp:
+    pwd: Hxx07131088
+   nickname: 归途
 
 
