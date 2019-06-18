@@ -23,7 +23,7 @@ public class UserController {
     private UserJPA userJPA;
 
     //@RequestMapping(value = "login", method = RequestMethod.GET,produces = "application/json; charset=utf-8")
-    @RequestMapping(value = "login", method = RequestMethod.GET)
+    @RequestMapping(value = "logins", method = RequestMethod.GET)
     public String login(UserEntity user, HttpServletRequest request) {
 
         UserEntity nameuser = userJPA.findOne(new Specification<UserEntity>() {

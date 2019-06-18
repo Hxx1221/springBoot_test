@@ -17,6 +17,7 @@ public class TestMain {
                 .title("测试SpringBoot发送邮件")
                 .content("简单文本内容发送")
                 .contentType(MailContentTypeEnum.TEXT)
+
                 .targets(new ArrayList<String>(){{
                     add("137125668@qq.com");
                 }})

@@ -2,12 +2,16 @@ spring:
   http:
     encoding:
       force-response: true
+    multipart:
+      max-request-size: 2048Mb
+      max-file-size: 1024Mb
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
 
-#  datasource:
+
+  #  datasource:
 #    url: jdbc:mysql://106.12.95.81:3306/test
 #    driverClassName: com.mysql.jdbc.Driver
 #    username: root
@@ -64,5 +68,6 @@ mail:
    smtp:
     pwd: Hxx07131088
    nickname: 归途
-
-
+logging:
+  level:
+    com.hxx.lessontwo.controller.IndexController: 'off'
