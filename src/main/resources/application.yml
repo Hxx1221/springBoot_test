@@ -71,3 +71,4 @@ mail:
 logging:
   level:
     com.hxx.lessontwo.controller.IndexController: 'off'
+

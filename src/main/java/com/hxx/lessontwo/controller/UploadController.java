@@ -1,5 +1,6 @@
 package com.hxx.lessontwo.controller;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,7 +9,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Consumer;
 
 @Controller
 public class UploadController {
@@ -80,7 +91,9 @@ public class UploadController {
     }
 
 
-
+    public void changeStr(String str, Consumer<String> con){
+        con.accept(str);
+    }
 
     /**
      * 提取上传方法为公共方法
@@ -98,6 +111,8 @@ public class UploadController {
         File serverFile = new File(uploadDir + filename);
         //将上传的文件写入到服务器端文件内
         file.transferTo(serverFile);
+        LocalDateTime now = LocalDateTime.now();
+
     }
 
 }
